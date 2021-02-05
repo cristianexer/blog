@@ -13,3 +13,8 @@ _notebooks/.ipynb_checkpoints
 __pycache__
 *.csv
 *.xlsx
+
+_notebooks/runs
+_notebooks/data
+_notebooks/cache_dir
+_notebooks/outputs
