@@ -1,15 +1,14 @@
 ---
 layout: page
-title: About
+title: Daniel Cristian Fat
 permalink: /about/
 ---
 
-# About
 Agnostic junior data scientist in the insurance sector, with prior experience in software development. 
 
 # Experience
-- Junior Data Scientist at [Beazley Group](https://www.beazley.com) | 2019 - present
-- Software Developer at Accommodation.co.uk | 2018
+- Junior Data Scientist at [Beazley Group](https://www.beazley.com) - 2019 - present
+- Software Developer at Accommodation.co.uk - 2018
 
 # Education
 - MSc Computer Science - University of Lincoln
