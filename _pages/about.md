@@ -1,8 +1,9 @@
 ---
 layout: page
-title: Daniel Cristian Fat
+title: About
 permalink: /about/
 ---
+**Daniel Cristian Fat**
 
 Agnostic junior data scientist in the insurance sector, with prior experience in software development. 
 
