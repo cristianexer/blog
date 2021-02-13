@@ -5,7 +5,7 @@ permalink: /about/
 ---
 **Daniel Cristian Fat**
 
-Agnostic junior data scientist working in the insurance sector.
+Agnostic junior data scientist with prior background in software development, currently working in the insurance sector and delivering high-performance data-driven solutions.
 
 # Experience
 - Junior Data Scientist at [Beazley Group](https://www.beazley.com) - 2019 - present
