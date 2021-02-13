@@ -18,3 +18,5 @@ _notebooks/runs
 _notebooks/data
 _notebooks/cache_dir
 _notebooks/outputs
+.vscode
+.ipynb_checkpoints
