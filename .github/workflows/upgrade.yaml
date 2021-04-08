@@ -16,6 +16,7 @@ jobs:
         echo "FULL PAYLOAD:\n${PAYLOAD}\n"
         echo "PR_PAYLOAD PAYLOAD:\n${PR_PAYLOAD}"
       env:
+        ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
         PAYLOAD: ${{ toJSON(github.event) }}
         PR_PAYLOAD: ${{ github.event.pull_request }}
 
@@ -45,6 +46,7 @@ jobs:
           })
           throw msg;
       env:
+        ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
         permission_level: ${{ github.event.issue.author_association }}
           
   upgrade:
@@ -58,11 +60,15 @@ jobs:
     
     - name: Set up Python
       uses: actions/setup-python@v1
+      env:
+        ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
       with:
         python-version: 3.7
     
     - name: checkout latest fastpages
       uses: actions/checkout@v2
+      env:
+        ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
       with:
         repository: 'fastai/fastpages'
         path: 'new_files'
@@ -70,6 +76,8 @@ jobs:
         
     - name: copy this repo's contents
       uses: actions/checkout@v2
+      env:
+        ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
       with:
         path: 'current_files'
         persist-credentials: false
@@ -197,6 +205,8 @@ jobs:
       if: steps.check_version.outputs.vbump == 'true'
       id: pr
       uses: actions/github-script@0.6.0
+      env:
+        ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
       with:
         github-token: ${{secrets.GITHUB_TOKEN}}
         script: |
@@ -227,6 +237,7 @@ jobs:
             body: `An error occurred when attempting to open a PR to update fastpages. See the [Actions tab of your repo](https://github.com/${repo}/actions) for more details.`
           })
       env:
+        ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
         PR_NUM: ${{ steps.pr.outputs.pr_num }}
         REPO: ${{ github.repository }}
 
@@ -245,12 +256,15 @@ jobs:
             body: `Opened PR https://github.com/${repo}/pull/${pr_num} to assist with updating fastpages.`
           })
       env:
+        ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
         PR_NUM: ${{ steps.pr.outputs.pr_num }}
         REPO: ${{ github.repository }}
 
     - name: Comment on issue if version has not changed
       if: steps.check_version.outputs.vbump == 'false'    
       uses: actions/github-script@0.6.0
+      env:
+        ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
       with:
         github-token: ${{secrets.GITHUB_TOKEN}}
         script: |
@@ -264,6 +278,8 @@ jobs:
     - name: Close Issue
       if: always()
       uses: actions/github-script@0.6.0
+      env:
+        ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
       with:
         github-token: ${{secrets.GITHUB_TOKEN}}
         script: |
