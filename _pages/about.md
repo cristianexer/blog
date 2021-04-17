@@ -5,7 +5,7 @@ permalink: /about/
 ---
 **Daniel Cristian Fat**
 
-Agnostic data scientist with prior background in software development, currently working in the insurance sector and delivering high-performance data-driven solutions.
+I am a passionate Data Scientist with prior experience in Software Development, currently working in insurance and delivering high-performance data-driven solutions. 
 
 ## Experience
 - Data Scientist at [Beazley Group](https://www.beazley.com) 2021 - present
