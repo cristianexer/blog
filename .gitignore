@@ -20,3 +20,5 @@ _notebooks/cache_dir
 _notebooks/outputs
 .vscode
 .ipynb_checkpoints
+*.lock
+*.dirlock
